@@ -1,0 +1,38 @@
+<div class="contianer">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table>
+        <thead>
+          <tr>
+            <th>Id  </th>
+            <th>Nom  </th>
+            <th>role  </th>
+            <th>salaire par dinars  </th>
+            <th>Date demande </th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let produit of produits">
+          <tr>
+            <td>{{ produit.idProduit }}</td>
+            <td>{{ produit.nomProduit }}</td>
+            <td>{{produit.role}}</td>
+            <td>{{ produit.prixProduit }}</td>
+            <td>{{ produit.dateCreation | date: "dd/MM/yyyy" }}</td>
+            <td>
+              <a class="btn btn-danger" (click)="supprimerProduit(produit)"
+                >Supprimer</a
+              >
+            </td>
+            <td>
+              <a
+                class="btn btn-danger"
+                [routerLink]="['/updateProduit', produit.idProduit]"
+                >Modifier</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

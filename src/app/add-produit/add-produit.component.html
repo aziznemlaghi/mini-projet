@@ -1,0 +1,58 @@
+<div class="container">
+  <div>
+    <h2>Gerer les travailleurs :</h2>
+  </div>
+  <form>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>ID travailleur </label>
+      <input
+        type="text"
+        [(ngModel)]="newProduit.idProduit"
+        name="idProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+      <label>nom complet </label>
+      <input
+        type="text"
+        [(ngModel)]="newProduit.nomProduit"
+        name="nomProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+      <label>role travailleur</label>
+      <input
+        type="text"
+        [(ngModel)]="newProduit.role"
+        name="role"
+        class="form-control"
+      />
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Salaire par dinars</label>
+      <input
+        type="number"
+        [(ngModel)]="newProduit.prixProduit"
+        name="prixProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date de joint</label>
+      <input
+        type="date"
+        [(ngModel)]="newProduit.dateCreation"
+        name="dateCreation"
+        class="form-control"
+      />
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="addProduit()" class="btn btn-success">
+        Ajouter
+      </button>
+    </div>
+  </form>
+</div>

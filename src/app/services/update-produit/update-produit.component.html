@@ -1,0 +1,60 @@
+<div class="container">
+  <div>
+    <h2>Modifier un travailleur :</h2>
+  </div>
+  <form>
+    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+      <label>ID </label>
+      <input
+        readonly
+        type="text"
+        [(ngModel)]="currentProduit.idProduit"
+        name="idProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Nom complet</label>
+      <input
+        type="text"
+        [(ngModel)]="currentProduit.nomProduit"
+        name="nomProduit"
+        class="form-control"
+      />
+    </div>
+    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+      <label>Role</label>
+      <input
+        readonly
+        type="text"
+        [(ngModel)]="currentProduit.role"
+        name="role"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label>Salaire par dinars</label>
+      <input
+        type="number"
+        [(ngModel)]="currentProduit.prixProduit"
+        name="prixProduit"
+        class="form-control"
+      />
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label>Date joint</label>
+      <input
+        type="date"
+        [ngModel]="currentProduit.dateCreation | date: 'yyyy-MM-dd'"
+        (ngModelChange)="currentProduit.dateCreation = $event"
+        name="dateCreation"
+        class="form-control"
+      />
+    </div>
+    <div class="mt-2">
+      <button type="submit" (click)="updateProduit()" class="btn btn-success">
+        Modifier
+      </button>
+    </div>
+  </form>
+</div>
